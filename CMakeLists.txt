@@ -12,7 +12,7 @@ add_library(helloworld lib.cpp)
 
 add_executable(test_main_cli test_main.cpp)
 
-set_target_properties(helloworld_cli test_main_cli PROPERTIES
+set_target_properties(helloworld_cli helloworld test_main_cli PROPERTIES
 	CXX_STANDARD 14
 	CXX_STANDARD_REQUIRED ON
 	COMPILE_OPTIONS -Wpedantic -Wall -Wextra
@@ -20,7 +20,7 @@ set_target_properties(helloworld_cli test_main_cli PROPERTIES
 
 set_target_properties(test_main_cli PROPERTIES
 	COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-	INCLUDE_DIRECTORIES ${BOOST_INCLUDE_DIR}
+	INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
 
