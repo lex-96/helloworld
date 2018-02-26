@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 
 project(helloworld VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
-find_package(Boost COMPONENTS unit_tests_framework REQUIRED)
+find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 configure_file(version.h.in version.h)
 
@@ -17,7 +17,7 @@ set_target_properties(helloworld_cli helloworld test_version PROPERTIES
 )
 
 set_target_properties(test_version PROPERTIES
-	COMPILE_DEFFINITIONS BOOST_TEST_DYN_LINK
+	COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
 	INCLUDE_DIRECTORIES ${BOOST_INCLUDE_DIR}
 )
 
