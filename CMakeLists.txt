@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 
 project(helloworld VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
-find_package(Boost COMPONENTS unit_tests_franevork REQUIRED)
+find_package(Boost COMPONENTS unit_tests_franework REQUIRED)
 
 configure_file(version.h.in version.h)
 
